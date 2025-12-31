@@ -121,20 +121,6 @@ Companies gain access to **Token-based payments or Barter exchanges** with secur
 
 ## Diagrams
 
-### ER Diagram
-![ER Diagram](link-to-your-er-diagram.png)
-
-> This ER Diagram shows all main entities in Manfaa, including **Users, CompanyProfiles, CompanyCredits, ServiceRequests, ServiceBids, ContractAgreements, Reviews, CreditTransactions, Subscriptions, Tickets, Categories, and Skills**, along with their relationships.  
-> It also visualizes one-to-one, one-to-many, and many-to-many relations clearly.  
-
-### Use Case Diagram
-![Use Case Diagram](link-to-your-usecase-diagram.png)
-
-> The Use Case Diagram illustrates interactions between **Companies and Admins** with the Manfaa system.  
-> It highlights key functionalities like **service requests, bidding, contract management with escrow, reviews, credit operations, and subscription handling**.  
-
----
-
 ### System Flow Diagrams
 
 #### Token-Based Service Exchange Flow
@@ -298,9 +284,7 @@ stateDiagram-v2
 
 ### Links
 
-- [🎨 Figma Design](link-to-figma)
-- [📬 Postman Documentation](link-to-postman)  
-- [📊 Presentation (Canva)](link-to-presentation)
+- [🎨 Figma Design](https://www.figma.com/site/3bPA8IWIxBTUWX803YicFz/Manafaah?node-id=0-1&p=f&t=eFcKHpnWZnGD9ogl-0)
 
 ---
 
@@ -346,135 +330,135 @@ With clear data modeling, automated email notifications, and robust review syste
 ## AuthController (`/api/v1/auth`)
 | Method | Path | Description | Name |
 |---|---|---|---|
-| POST | `/login` | User login (returns JWT token) | muath |
-| POST | `/logout` | User logout (clears JWT cookie) | muath |
+| POST | `/login` | User login (returns JWT token) | mohammed |
+| POST | `/logout` | User logout (clears JWT cookie) | mohammed |
 
 ---
 
-## UserController (`/api/v1/user`)
-| Method | Path | Description | Name |
-|---|---|---|---|
-| GET | `/get-all` | Get all users | muteb |
-| POST | `/add` | Add new user/admin | muteb |
-| PUT | `/update/{userId}` | Update user details | muteb |
-| DELETE | `/delete/{userId}` | Delete user | muteb |
-
----
 
 ## CompanyProfileController (`/api/v1/company`)
 | Method | Path | Description | Name |
 |---|---|---|---|
-| GET | `/get-all` | Get all company profiles | hassan |
-| POST | `/register` | Register new company | hassan |
-| PUT | `/update` | Update company profile | hassan |
-| DELETE | `/delete` | Delete company profile | hassan |
-| GET | `/get-companies-full` | Get all companies with full details | hassan |
-| GET | `/get-company-full` | Get current company full details | hassan |
-| GET | `/get-company-id-full/{companyId}` | Get company by ID with full details | hassan |
+| GET | `/get-all` | Get all company profiles | nawaf |
+| POST | `/register` | Register new company | nawaf |
+| PUT | `/update` | Update company profile | nawaf |
+| DELETE | `/delete` | Delete company profile | nawaf |
+| GET | `/get-companies-full` | Get all companies with full details | nawaf |
+| GET | `/get-company-full` | Get current company full details | nawaf |
+| GET | `/get-company-id-full/{companyId}` | Get company by ID with full details | nawaf |
 
 ---
 
 ## CategoryController (`/api/v1/category`)
 | Method | Path | Description | Name |
 |---|---|---|---|
-| GET | `/get` | Get all categories | muteb |
-| POST | `/add` | Add category (Admin) | muteb |
-| PUT | `/update/{categoryId}` | Update category (Admin) | muteb |
-| DELETE | `/delete/{categoryId}` | Delete category (Admin) | muteb |
+| GET | `/get` | Get all categories | ibrshim |
+| POST | `/add` | Add category (Admin) | ibrahim |
+| PUT | `/update/{categoryId}` | Update category (Admin) | ibrahim |
+| DELETE | `/delete/{categoryId}` | Delete category (Admin) | ibrahim |
 
 ---
 
 ## SkillsController (`/api/v1/skills`)
 | Method | Path | Description | Name |
 |---|---|---|---|
-| GET | `/get-all` | Get all skills | muteb |
-| POST | `/add` | Add skill (Admin) | muteb |
-| PUT | `/update/{skillsId}` | Update skill (Admin) | muteb |
-| DELETE | `/delete/{skillsId}` | Delete skill (Admin) | muteb |
-| POST | `/assign/{userId}/{skillId}` | Assign skill to company | muteb |
-| DELETE | `/remove/{userId}/{skillId}` | Remove skill from company | muteb |
-| GET | `/company/{companyId}` | Get skills by company | muteb |
-| GET | `/search/{keyword}` | Search skills by keyword | muteb |
+| GET | `/get-all` | Get all skills | ibrahim |
+| POST | `/add` | Add skill (Admin) | ibrahim |
+| PUT | `/update/{skillsId}` | Update skill (Admin) | ibrahim |
+| DELETE | `/delete/{skillsId}` | Delete skill (Admin) | ibrahim |
+| POST | `/assign/{userId}/{skillId}` | Assign skill to company | ibrahim |
+| DELETE | `/remove/{userId}/{skillId}` | Remove skill from company | ibrahim |
+| GET | `/company/{companyId}` | Get skills by company | ibrahim |
+| GET | `/search/{keyword}` | Search skills by keyword | ibrahim |
 
 ---
 
 ## CompanyCreditController (`/api/v1/credit`)
 | Method | Path | Description | Name |
 |---|---|---|---|
-| GET | `/get-all` | Get all company credits | muteb |
+| GET | `/get-all` | Get all company credits | mohammed |
 
 ---
 
 ## ServiceRequestController (`/api/v1/service-request`)
 | Method | Path | Description | Name |
 |---|---|---|---|
-| GET | `/get-all` | Get all service requests | hassan |
-| POST | `/token/{companyId}` | Create token-based request | hassan |
-| POST | `/barter/{companyId}` | Create barter request | hassan |
-| POST | `/either/{companyId}` | Create either-type request | hassan |
-| PUT | `/update/{id}/{requestId}` | Update service request | hassan |
-| DELETE | `/delete/{requestId}/{id}` | Delete service request | hassan |
-| GET | `/category/{categoryId}` | Get requests by category | hassan |
-| GET | `/status/{status}` | Get requests by status | hassan |
-| GET | `/exchange/{exchangeType}` | Get requests by exchange type | hassan |
-| GET | `/date-range` | Filter by date range | hassan |
-| GET | `/token-range` | Filter by token amount | hassan |
-| GET | `/sort/{order}` | Sort by token amount | hassan |
-| GET | `/company/{companyId}/request-with-bids/{requestId}` | Get request with bids | hassan |
+| GET | `/get-all` | Get all service requests | mohammed |
+| POST | `/token/{companyId}` | Create token-based request | mohammed |
+| POST | `/barter/{companyId}` | Create barter request | mohammed |
+| POST | `/either/{companyId}` | Create either-type request | mohammed |
+| PUT | `/update/{id}/{requestId}` | Update service request | mohammed |
+| DELETE | `/delete/{requestId}/{id}` | Delete service request | mohammed |
+| GET | `/category/{categoryId}` | Get requests by category | mohammed |
+| GET | `/category/{categoryId}` | Get requests with bids | mohammed |
+| GET | `/category/{categoryId}` | Get requests with bids subscriber | mohammed |
+| GET | `/category/{categoryId}` | Get requests with bids subscriber | mohammed |
+| GET | `/status/{status}` | Get requests by status | mohammed |
+| GET | `/get-by-exchange-type/{exchange_type}` | Get requests by exchange type | mohammed |
+| GET | `/date-range` | Filter by date range | mohammed |
+| GET | `/token-range` | Filter by token range | mohammed |
+| GET | `/sort/{order}` | Sort by token amount | mohammed |
+| GET | `/get-company-open/{company_id}` | getOpenServiceRequestOfCompany | mohammed |
+| GET | `/get-company-closed/{company_id}` | getClosedServiceRequestOfCompany | mohammed |
+| GET | `/get-company-canceld/{company_id}` | getCanceldServiceRequestOfCompany | mohammed |
 
----
+
+
+|
+
+---getOpenServiceRequestOfCompany
 
 ## ServiceBidController (`/api/v1/bid`)
 | Method | Path | Description | Name |
 |---|---|---|---|
-| GET | `/get-all` | Get all bids | muath |
-| POST | `/create/{companyId}/{requestId}` | Submit bid | muath |
-| PUT | `/update/{id}/{bidId}` | Update bid | muath |
-| DELETE | `/delete/{id}/{bidId}` | Delete bid | muath |
-| POST | `/accept/{bidId}/{userId}` | Accept bid | muath |
-| POST | `/reject/{bidId}/{userId}` | Reject bid with notes | muath |
+| GET | `/get-all` | Get all bids | mohammed |
+| POST | `/create/{companyId}/{requestId}` | Submit bid | mohammed |
+| PUT | `/update/{id}/{bidId}` | Update bid | mohammed |
+| DELETE | `/delete/{id}/{bidId}` | Delete bid | mohammed |
+| POST | `/accept/{bidId}/{userId}` | Accept bid | mohammed |
+| POST | `/reject/{bidId}/{userId}` | Reject bid with notes | mohammed |
 
 ---
 
 ## ContractAgreementController (`/api/v1/contract`)
 | Method | Path | Description | Name |
 |---|---|---|---|
-| GET | `/get-all` | Get all contracts | muath |
-| POST | `/create` | Create contract | muath |
-| DELETE | `/delete/{contractId}` | Delete pending contract | muath |
-| POST | `/accept/{contractId}` | Approve contract | muath |
-| POST | `/reject/{contractId}` | Reject contract | muath |
-| POST | `/complete/{contractId}` | Mark delivery complete | muath |
+| GET | `/get-all` | Get all contracts | mohammed |
+| POST | `/create` | Create contract | mohammed |
+| DELETE | `/delete/{contractId}` | Delete pending contract | mohammed |
+| POST | `/accept/{contractId}` | Approve contract | mohammed |
+| POST | `/reject/{contractId}` | Reject contract | mohammed |
+| POST | `/complete/{contractId}` | Mark delivery complete | mohammed |
 
 ---
 
 ## ReviewController (`/api/v1/reviews`)
 | Method | Path | Description | Name |
 |---|---|---|---|
-| GET | `/get-all` | Get all reviews (Admin) | hassan |
-| GET | `/get/{reviewId}` | Get review by ID | hassan |
-| POST | `/add/{reviewedCompanyId}/{contractId}` | Add review | hassan |
-| PUT | `/update/{reviewId}` | Update review | hassan |
-| DELETE | `/delete/{reviewId}` | Delete review | hassan |
-| GET | `/company/{companyId}/received` | Get reviews received | hassan |
-| GET | `/company/{companyId}/written` | Get reviews written | hassan |
-| GET | `/company/{companyId}/reviewed-contracts` | Get reviewed contracts | hassan |
-| GET | `/search/{keyword}` | Search reviews by keyword | hassan |
-| GET | `/exchange-type/{exchangeType}` | Filter reviews by exchange type | hassan |
-| GET | `/company/{companyId}/best-to-worst` | Sort reviews by rating | hassan |
-| POST | `/create-pending-reviews/{contractAgreementId}` | Create pending reviews | hassan |
-| POST | `/handle-rejection/{contractAgreementId}` | Handle rejection & refund | hassan |
+| GET | `/get-all` | Get all reviews (Admin) | ibrahim |
+| GET | `/get/{reviewId}` | Get review by ID | ibrahim |
+| POST | `/add/{reviewedCompanyId}/{contractId}` | Add review | ibrahim |
+| PUT | `/update/{reviewId}` | Update review | ibrahim |
+| DELETE | `/delete/{reviewId}` | Delete review | ibrahim |
+| GET | `/company/{companyId}/received` | Get reviews received | ibrahim |
+| GET | `/company/{companyId}/written` | Get reviews written | ibrahim |
+| GET | `/company/{companyId}/reviewed-contracts` | Get reviewed contracts | ibrahim |
+| GET | `/search/{keyword}` | Search reviews by keyword | ibrahim |
+| GET | `/exchange-type/{exchangeType}` | Filter reviews by exchange type | ibrahim |
+| GET | `/company/{companyId}/best-to-worst` | Sort reviews by rating | ibrahim |
+| POST | `/create-pending-reviews/{contractAgreementId}` | Create pending reviews | ibrahim |
+| POST | `/handle-rejection/{contractAgreementId}` | Handle rejection & refund | ibrahim |
 
 ---
 
 ## CreditTransactionController (`/api/v1/transaction`)
 | Method | Path | Description | Name |
 |---|---|---|---|
-| GET | `/get-all` | Get all transactions (Admin) | muteb |
-| GET | `/get-by-companyId/{companyId}` | Get company transactions (Admin) | muteb |
-| GET | `/get-my-transactions` | Get current company transactions | muteb |
-| POST | `/add-balance` | Add credit to company (Admin) | muteb |
-| POST | `/refund/{contractId}` | Process credit refund (Admin) | muteb |
+| GET | `/get-all` | Get all transactions (Admin) | mohammed |
+| GET | `/get-by-companyId/{companyId}` | Get company transactions (Admin) | mohammed |
+| GET | `/get-my-transactions` | Get current company transactions | mohammed |
+| POST | `/add-balance` | Add credit to company (Admin) | mohammed |
+| POST | `/refund/{contractId}` | Process credit refund (Admin) | mohammed |
 
 ---
 
@@ -482,27 +466,18 @@ With clear data modeling, automated email notifications, and robust review syste
 | Method | Path | Description | Name |
 |---|---|---|---|
 | GET | `/get-all` | Get all subscriptions (Admin) | hassan |
-| POST | `/monthly/{companyProfileId}` | Subscribe monthly (120 SAR) | hassan |
-| POST | `/yearly/{companyProfileId}` | Subscribe yearly (1,200 SAR) | hassan |
-| DELETE | `/cancel/{companyId}/{subscriptionId}` | Cancel subscription | hassan |
+| POST | `/monthly/{companyProfileId}` | Subscribe monthly (120 SAR) | ibrahim |
+| POST | `/yearly/{companyProfileId}` | Subscribe yearly (1,200 SAR) | ibrahim |
+| DELETE | `/cancel/{companyId}/{subscriptionId}` | Cancel subscription | ibrahim |
 
 ---
 
 ## TicketController (`/api/v1/ticket`)
 | Method | Path | Description | Name |
 |---|---|---|---|
-| GET | `/get-all/{adminId}` | Get all tickets (Admin) | muteb |
-| POST | `/create/{companyId}/{contractId}` | Create support ticket | muteb |
-| PUT | `/update/{ticketId}/{companyId}` | Update ticket | muteb |
-| DELETE | `/delete/{ticketId}/{companyId}` | Delete ticket | muteb |
+| GET | `/get-all/{adminId}` | Get all tickets (Admin) | mohammed |
+| POST | `/create/{companyId}/{contractId}` | Create support ticket | mohammed |
+| PUT | `/update/{ticketId}/{companyId}` | Update ticket | mohammed |
+| DELETE | `/delete/{ticketId}/{companyId}` | Delete ticket | mohammed |
 
 ---
-
-## JUnit Tests Summary
-
-| Test Class | Layer | Covered Repository/Service/Controller | Count | Name |
-|---|---|---|---:|---|
-| UserRepositoryTest | Repository | UserRepository, CompanyProfileRepository, CompanyCreditRepository | 6 | muteb |
-| ServiceRequestServiceTest | Service | ServiceRequestService (with ServiceRequestRepository, CompanyProfileRepository, CategoryRepository) | 10 | hassan |
-| ContractAgreementControllerTest | Controller | ContractAgreementController (with mocked ContractAgreementService) | 8 | muath |
-| **Total** |  |  | **24** |  |
