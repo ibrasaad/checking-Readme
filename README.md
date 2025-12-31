@@ -465,7 +465,7 @@ With clear data modeling, automated email notifications, and robust review syste
 ## SubscriptionController (`/api/v1/subscription`)
 | Method | Path | Description | Name |
 |---|---|---|---|
-| GET | `/get-all` | Get all subscriptions (Admin) | hassan |
+| GET | `/get-all` | Get all subscriptions (Admin) | ibrahim |
 | POST | `/monthly/{companyProfileId}` | Subscribe monthly (120 SAR) | ibrahim |
 | POST | `/yearly/{companyProfileId}` | Subscribe yearly (1,200 SAR) | ibrahim |
 | DELETE | `/cancel/{companyId}/{subscriptionId}` | Cancel subscription | ibrahim |
